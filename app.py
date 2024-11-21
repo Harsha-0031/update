@@ -10,7 +10,6 @@ end_date = datetime.date(2024, 11, 1)
 
 # @app.before_request
 def check_for_updates():
-    check_date()
     # Change to the directory where your app's code is located
     app_directory = r'D:\Harsha\git_update\update'
     os.chdir(app_directory)
@@ -27,7 +26,7 @@ def check_for_updates():
         print(f"Error updating the application: {e}")
 
 
-# @app.before_request
+@app.before_request
 def check_date():
     print("inside check date")
     today = datetime.date.today()
