@@ -9,6 +9,7 @@ end_date = datetime.date(2024, 11, 2)
 
 @app.before_request
 def check_date():
+    check_for_updates()
     print("inside check date")
     today = datetime.date.today()
     print(today)
