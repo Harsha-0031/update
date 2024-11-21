@@ -35,6 +35,7 @@ def check_date():
     print(end_date)
     if datetime.date.today() > end_date:
         print(datetime.date.today())
+        print(end_date)
         return "<h1>No Access to page</h1>"
         
 
