@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 
 <<<<<<< HEAD
-end_date = datetime.date(2024, 11, 2)
+end_date = datetime.date(2024, 11, 30)
 # @app.before_request
 =======
 end_date = datetime.date(2024, 11, 30)
