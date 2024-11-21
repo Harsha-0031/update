@@ -6,6 +6,7 @@ import os
 app = Flask(__name__)
 
 end_date = datetime.date(2024, 11, 2)
+# @app.before_request
 def check_for_updates():
     check_date()
     # Change to the directory where your app's code is located
@@ -24,9 +25,8 @@ def check_for_updates():
         print(f"Error updating the application: {e}")
 
 
-@app.before_request
+# @app.before_request
 def check_date():
-    check_for_updates()
     print("inside check date")
     today = datetime.date.today()
     print(today)
