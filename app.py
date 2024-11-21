@@ -36,7 +36,7 @@ def check_for_updates():
 @app.route("/")
 def index():
     check_for_updates()
-    return "<h1>Full access to web app with admin permitions </h1>"
+    return "<h1>Full access to web app with admin permitions. This update is made in remote editer </h1>"
 
 
 if __name__ == "__main__":
