@@ -5,24 +5,8 @@ import os
 
 app = Flask(__name__)
 
-<<<<<<< HEAD
 end_date = datetime.date(2024, 11, 2)
 # @app.before_request
-=======
-end_date = datetime.date(2024, 11, 30)
-
-@app.before_request
-def check_date():
-    print("inside check date")
-    today = datetime.date.today()
-    print(today)
-    print(end_date)
-    if datetime.date.today() > end_date:
-        print(datetime.date.today())
-        return "<h1>No Access to page</h1>"
-        
-
->>>>>>> 504a5c180bff8236c63c8ace74e30e68016c1823
 def check_for_updates():
     check_date()
     # Change to the directory where your app's code is located
