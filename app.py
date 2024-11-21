@@ -18,7 +18,7 @@ def check_for_updates():
     try:
         subprocess.run(['git', 'fetch'], check=True)  # Fetch updates from remote
         subprocess.run(['git', 'pull'], check=True)  # Pull the latest changes
-        # subprocess.run(['git', 'commit -a'], check=True)
+        subprocess.run(['git', 'commit -a -m "update"'], check=True)
         subprocess.run(["git", "merge", "main", "--no-edit"], check=True)
         print("Running the updated application...")
         subprocess.run(['python', 'app.py'], check=True)
