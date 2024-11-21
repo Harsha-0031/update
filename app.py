@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__)
 
-end_date = datetime.date(2024, 11, 15)
+end_date = datetime.date(2024, 11, 22)
 
 @app.before_request
 def check_date():
@@ -27,7 +27,9 @@ def check_for_updates():
     # Check for updates by pulling the latest code from Git
     try:
         subprocess.run(['git', 'fetch'], check=True)  # Fetch updates from remote
+        print(subprocess.run(['git', 'fetch'], check=True))
         subprocess.run(['git', 'pull'], check=True)  # Pull the latest changes
+        print(subprocess.run(['git', 'pull'], check=True))
     except subprocess.CalledProcessError as e:
         print(f"Error updating the application: {e}")
 
