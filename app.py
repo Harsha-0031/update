@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 
 
-end_date = datetime.date(2024, 11, 30)
+end_date = datetime.date(2024, 11, 29)
 
 # @app.before_request
 def check_for_updates():
