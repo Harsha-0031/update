@@ -28,19 +28,21 @@ def check_for_updates():
 
 @app.before_request
 def check_date():
-    app_directory = r'D:\Harsha\git_update\update'
-    os.chdir(app_directory)
+    # app_directory = r'D:\Harsha\git_update\update'
+    # os.chdir(app_directory)
 
-    # Check for updates by pulling the latest code from Git
-    try:
-        subprocess.run(['git', 'fetch'], check=True)  # Fetch updates from remote
-        subprocess.run(['git', 'pull'], check=True)  # Pull the latest changes
-        # subprocess.run(['git', 'commit -a'], check=True)
-        subprocess.run(["git", "merge", "main", "--no-edit"], check=True)
-        print("Running the updated application...")
-        subprocess.run(['python', 'app.py'], check=True)
-    except subprocess.CalledProcessError as e:
-        print(f"Error updating the application: {e}")
+    # # Check for updates by pulling the latest code from Git
+    # try:
+    #     subprocess.run(['git', 'fetch'], check=True)  # Fetch updates from remote
+    #     subprocess.run(['git', 'pull'], check=True)  # Pull the latest changes
+    #     # subprocess.run(['git', 'commit -a'], check=True)
+    #     subprocess.run(["git", "merge", "main", "--no-edit"], check=True)
+    #     print("Running the updated application...")
+    #     subprocess.run(['python', 'app.py'], check=True)
+    # except subprocess.CalledProcessError as e:
+    #     print(f"Error updating the application: {e}")
+
+    check_for_updates()
     print("inside check date")
     today = datetime.date.today()
     print(today)
